@@ -1,0 +1,17 @@
+﻿# Виртуальное окружение
+.venv/
+venv/
+
+# Файлы Python
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# Логи
+*.log
+
+# Windows
+Thumbs.db
