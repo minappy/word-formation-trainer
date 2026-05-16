@@ -1,14 +1,13 @@
-"""
-Модуль для генерации заданий
-Случайным образом выбирает слова из базы и формирует вопросы
-"""
+# Модуль для генерации заданий
+# Случайным образом выбирает слова из базы и формирует вопросы
+
 
 import random
 from modules.word_bank import get_words_for_category
 
 
 def generate_question(word, category):
-    """Генерирует текст вопроса для пользователя"""
+    # Генерирует текст вопроса для пользователя
     category_ru = {
         "однокоренные": "однокоренных слов",
         "антонимы": "антонимов",
@@ -18,7 +17,7 @@ def generate_question(word, category):
 
 
 def get_random_questions(category, count=5):
-    """Возвращает список случайных вопросов с ответами"""
+    # Возвращает список случайных вопросов с ответами
     words_dict = get_words_for_category(category)
     
     if len(words_dict) < count:
@@ -40,6 +39,6 @@ def get_random_questions(category, count=5):
 
 
 def get_question_count(category):
-    """Возвращает количество доступных вопросов для категории"""
+    # Возвращает количество доступных вопросов для категории
     words_dict = get_words_for_category(category)
     return len(words_dict)
